@@ -12,7 +12,7 @@ body{
     height: 120px;
     width: 100%;
     border-bottom: 1px solid #CCC;
-    border-top: 5px solid #61DAFB;
+    border-top: 5px solid #41B883 ;
     background-color: white;
 }
 
@@ -38,16 +38,26 @@ body{
     float: left;
     height: 60px;
     margin-top: -9px;
-    margin-right: -10px;
-    animation: girar infinite 15s linear;
+    margin-right: 10px;
+    animation: latir infinite 2s linear;
 }
 
-@keyframes girar {
-    from{
-        transform: rotate(0deg) ;
+@keyframes latir {
+    0%{
+        transform: scale(1, 1) ;
     }
-    to{
-        transform: rotate(360deg);
+
+    50%{
+        transform: scale(1.02, 1.02);
+    }
+
+    55%{
+        transform: scale(0.95, 0.95);
+    }
+
+
+    100%{
+        transform: scale(1, 1);
     }
 }
 
@@ -84,23 +94,23 @@ body{
 }
 
 #menu a:hover{
-    color: #61DAFB;
+    color: #41B883;
 }
 
 #slider{
     width: 100%;
     height: 350px;
-    /*line-height: 320px;*/
     color: white;
+    /*DEGRADADO CSS*/
     text-shadow: 0px 0px 5px #444;
-    background: rgba(179,220,237,1);
-    background: -moz-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 45%, rgba(82,195,232,1) 60%, rgba(188,224,238,1) 99%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(179,220,237,1)), color-stop(45%, rgba(41,184,229,1)), color-stop(60%, rgba(82,195,232,1)), color-stop(99%, rgba(188,224,238,1)));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 45%, rgba(82,195,232,1) 60%, rgba(188,224,238,1) 99%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 45%, rgba(82,195,232,1) 60%, rgba(188,224,238,1) 99%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 45%, rgba(82,195,232,1) 60%, rgba(188,224,238,1) 99%);
-    background: radial-gradient(ellipse at center, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 45%, rgba(82,195,232,1) 60%, rgba(188,224,238,1) 99%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
+    background: rgba(164,179,87,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(164,179,87,1) 39%, rgba(83,183,123,1) 62%, rgba(65,184,131,1) 67%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(164,179,87,1)), color-stop(39%, rgba(164,179,87,1)), color-stop(62%, rgba(83,183,123,1)), color-stop(67%, rgba(65,184,131,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(164,179,87,1) 39%, rgba(83,183,123,1) 62%, rgba(65,184,131,1) 67%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(164,179,87,1) 39%, rgba(83,183,123,1) 62%, rgba(65,184,131,1) 67%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(164,179,87,1) 39%, rgba(83,183,123,1) 62%, rgba(65,184,131,1) 67%);
+    background: radial-gradient(ellipse at center, rgba(164,179,87,1) 0%, rgba(164,179,87,1) 39%, rgba(83,183,123,1) 62%, rgba(65,184,131,1) 67%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#41b883', GradientType=1 );
 }
 
 #slider h1{
@@ -130,7 +140,7 @@ body{
 
 .btn-white:hover{
     background-color: #444;
-    color: #61DAFB;
+    color:#41B883;
 }
 
 #slider.slider-small{
@@ -196,7 +206,7 @@ body{
 }
 
 .btn-success:hover{
-    background-color: #61DAFB;
+    background-color: #41B883;
 }
 
 input[type="text"], textarea{
@@ -273,7 +283,7 @@ textarea:focus{
 
 .article-item a:hover{
     text-decoration: underline;
-    color: #61DAFB;
+    color: #41B883;
 }
 
 .subheader{
@@ -349,7 +359,18 @@ textarea{
     }
 }
 
-@media (max-width: 797px){
+@media (max-width: 881px){
+    #logo{
+        float: none;
+        width: 265px;
+    }
+
+    #menu{
+        width: auto;
+    }
+}
+
+@media (max-width: 813px){
     #menu,
     #menu ul{
         float: none;
@@ -362,7 +383,6 @@ textarea{
 
     #logo{
         float: none;
-        width: 240px;
         margin: 0px auto;
         margin-top: 20px;
 

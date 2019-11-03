@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assests/css/style.css">
+    <title>Maquetacion MAsters en Frameworks Javascript</title>
+</head>
+<body>
+    <header id="header">
+        <!---LOGO-->
+        <div class="center">
+            <div id="logo">
+                <a href="index.html"><img src="assests/images/768px-React-icon.svg" class="app-logo" alt="LogoTipo"></a>
+                <span id="brand">
+                    <strong>Curso</strong>React
+                </span>
+            </div>
+            <!--MENU-->
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="formulario.html">Formulario</a></li>
+                    <li><a href="#">Pagina 1</a></li>
+                    <li><a href="#">Pagina 2</a></li>
+                </ul>
+            </nav>
+            <!--LIMPIAR FLOTADOS-->
+            <div class="clearfix"></div>
+            <!-- FIN MENU-->
+        </div>
+        <!--- FIN LOGO-->
+    </header>
+    <!--SLIDER-->
+    <div id="slider" class="slider-big">
+        <h1>Curso React</h1>
+        <a href="blog.html" class="btn-white">Ir al Blog</a>
+    </div>
+<!--FIN SLIDER-->
+    <div class="center">
+        <section id="content">
+            <h2 class="subheader">Últimos articulos</h2>
+
+            <!--LISTADO ARTICULOS-->
+            <div id="articles">
+                <article class="article-item" id="article-template">
+                    <div class="image-wrap">
+                        <img src="https://i.pinimg.com/originals/1b/d6/8e/1bd68e04dba06fabb36abf2331a70161.jpg" alt="Paisaje con Osos">
+                    </div>            
+                     <h2>Articulo de prueba</h2>
+                      <span class="date">Hace 5 minutos</span>
+                     <a href="#">Leer mas</a>
+                     <div class="clearfix"></div>
+                </article>
+                <!--ANADIR ARTICULOS VIA JS-->
+            </div>
+
+        </section>
+        <aside id="sidebar">
+            <div id="nav-blog" class="sidebar-item">
+                <h3>Puedes hacer esto</h3>
+                <a href="article.html" class="btn btn-success">Crear articulo</a>
+            </div>
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el articulo que buscas</p>
+                <form action="">
+                    <input type="text" name="search">
+                    <input type="submit" name="submit" value="buscar" class="btn btn-success">
+                </form>
+            </div>
+        </aside>
+        <div class="clearfix"></div>
+    </div>
+    <footer id="footer">
+        <div class="center">
+            <p>&copy; UDEMY Todos los derechos reservados 2019</p>
+        </div>
+    </footer>
+</body>
+<script>
+            
+    var template = document.getElementById('article-template');
+    var articles = document.getElementById('articles');
+    
+    for(var i = 1; i <= 5; i++){
+        var clonado = template.cloneNode(true);
+        clonado.removeAttribute("id");
+        var h2 = clonado.getElementsByTagName('h2')[0];
+        h2.innerHTML = h2.textContent + ' ' + i;
+        articles.appendChild(clonado);
+    }
+
+</script>
+
+</html>

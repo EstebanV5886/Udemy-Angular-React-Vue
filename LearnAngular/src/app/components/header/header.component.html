@@ -1,0 +1,25 @@
+<header id="header">
+        <!---LOGO-->
+        <div class="center">
+            <div id="logo">
+                <a href="index.html"><img src="assets/images/angular-icon.svg" class="app-logo" alt="LogoTipo"></a>
+                <span id="brand">
+                    <strong>Curso</strong>Angular
+                </span>
+            </div>
+            <!--MENU-->
+            <nav id="menu">
+                <ul>
+                    <li><a [routerLink]="['/home']"[routerLinkActive]="['active']">Inicio</a></li>
+                    <li><a [routerLink]="['/blog']"[routerLinkActive]="['active']">Blog</a></li>
+                    <li><a [routerLink]="['/formulario']"[routerLinkActive]="['active']">Formulario</a></li>
+                    <li><a [routerLink]="['/peliculas']"[routerLinkActive]="['active']">Peliculas</a></li>
+                    <li><a [routerLink]="['/pagina-de-pruebas']"[routerLinkActive]="['active']">Página</a></li>
+                </ul>
+            </nav>
+            <!--LIMPIAR FLOTADOS-->
+            <div class="clearfix"></div>
+            <!-- FIN MENU-->
+        </div>
+        <!--- FIN LOGO-->
+    </header>

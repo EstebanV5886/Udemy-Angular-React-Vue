@@ -156,7 +156,7 @@ var controller = {
 
     update: (res, req) => {
         //Recoger el Id del articulo que viene por url
-        var articleID = req.params.id;
+        var article_id = req.params.id;
         //recoger los datos que llegan por put
         var params = req.body;
         //validar los datos

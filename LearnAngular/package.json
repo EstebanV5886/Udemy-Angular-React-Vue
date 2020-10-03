@@ -25,6 +25,7 @@
     "elliptic": "^6.5.3",
     "kind-of": "^6.0.3",
     "minimist": "^1.2.5",
+    "node-forge": "^0.10.0",
     "rxjs": "~6.4.0",
     "serialize-javascript": "^3.1.0",
     "sweetalert": "^2.1.2",
